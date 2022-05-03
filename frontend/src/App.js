@@ -13,10 +13,9 @@ import { AnimalProvider } from './context/AnimalContext';
 
 function App() {
   return (
-    <AnimalProvider>
-      <Router>
+      <Router basename='/'>
+            <AnimalProvider>
       <Navbar />
-
     <Routes>
       <Route path='/memorize' element={ <>     <NavbarFlag /><AnimalMemorize /></>} />
       <Route path='/quiz' element={<AnimalQuiz />} />
@@ -24,9 +23,9 @@ function App() {
       <Route path='/quiz' element={<AnimalQuiz />} />
     </Routes>
       <Footer />
-      </Router>
       <ToastContainer />
     </AnimalProvider>
+    </Router>
   );
 }
 
